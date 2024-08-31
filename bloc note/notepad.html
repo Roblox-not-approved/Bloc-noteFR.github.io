@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloc-Notes</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="ah.css"> <!-- Style pour le bloc-notes -->
+    <link rel="stylesheet" href="dark.css"> <!-- Thème sombre -->
+</head>
+<body>
+    <div class="notepad-container">
+        <div class="notepad-header">
+            <h1 class="notepad-title">Bloc-Notes By Antoine</h1>
+            <div class="notepad-toolbar">
+                <button id="newFile" title="Nouveau fichier">
+                    <img src="https://cdn-icons-png.flaticon.com/512/5825/5825337.png" alt="Nouveau">
+                </button>
+                <button id="saveButton" title="Sauvegarder">
+                    <img src="https://cdn1.iconfinder.com/data/icons/ios-11-glyphs/30/save-512.png" alt="Sauvegarder">
+                </button>
+                <button id="searchButton" title="Rechercher">
+                    <img src="https://cdn-icons-png.flaticon.com/512/107/107122.png" alt="Rechercher">
+                </button>
+                <button id="themeToggle" title="Changer le thème">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3659/3659752.png" alt="Thème">
+                </button>
+            </div>
+        </div>
+        <div class="notepad-content">
+            <textarea id="noteArea" placeholder="Écrivez vos notes ici..."></textarea>
+            <div id="searchResults" class="search-results"></div>
+            <div id="fileList" class="file-list">
+                <h2>Fichiers Sauvegardés</h2>
+                <ul id="fileListItems"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="notepad.js"></script>
+</body>
+</html>

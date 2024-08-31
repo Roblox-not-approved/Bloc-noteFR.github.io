@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="animate-title">Connexion</h1>
+        <form id="loginForm" class="login-form">
+            <input type="text" id="username" placeholder="Nom d'utilisateur" required>
+            <input type="password" id="password" placeholder="Mot de passe" required>
+            <button type="submit">Se connecter</button>
+        </form>
+        <div id="message" class="message"></div>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Empêche le rechargement de la page
+
+            // Récupère les informations de connexion
+            let username = document.getElementById('username').value;
+            let password = document.getElementById('password').value;
+
+            // Vérifie les informations de connexion
+            if (username === 'Antoine' && password === 'Antoine80') {
+                // Stocke l'état de connexion et redirige vers le site principal
+                localStorage.setItem('loggedIn', 'true');
+                window.location.href = 'main.html'; // Page principale après connexion
+            } else {
+                // Affiche un message d'erreur
+                document.getElementById('message').textContent = 'Nom d\'utilisateur ou mot de passe incorrect.';
+            }
+        });
+    </script>
+</body>
+</html>

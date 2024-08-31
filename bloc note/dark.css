@@ -1,0 +1,23 @@
+body.dark-theme .notepad-container {
+    background: #2e2e2e;
+    color: #fff;
+}
+
+body.dark-theme .notepad-header {
+    background: #1e1e1e;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-theme textarea {
+    background: #333;
+    color: #ddd;
+    border-color: #555;
+}
+
+body.dark-theme .file-list {
+    border-color: #555;
+}
+
+body.dark-theme .file-list li {
+    border-bottom: 1px solid #444;
+}
